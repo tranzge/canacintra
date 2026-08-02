@@ -17,7 +17,8 @@ async function initializeApp(forceRefresh = false) {
     const container = document.getElementById('dashboard-container');
     
     try {
-        const data = await API.fetchSheetData(forceRefresh);
+        let data = await API.fetchSheetData(forceRefresh);
+        data = Helpers.shuffle(data); // Randomizar orden para equidad
         
         // Remove skeleton layout
         container.innerHTML = '';
@@ -27,20 +28,19 @@ async function initializeApp(forceRefresh = false) {
 
         // Create structure
         container.innerHTML = `
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-5 animate-fade-in">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-6 animate-fade-in">
                 <div>
-                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white flex items-center gap-2">
-                        <i class="ph ph-rocket text-primary-600"></i>
-                        Directorio de Emprendedores
+                    <h2 class="text-4xl md:text-5xl font-black text-gray-900 dark:text-white flex items-center gap-3 tracking-tighter">
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-green-400">Portafolio</span> Jóvenes CANACINTRA
                     </h2>
-                    <p class="text-gray-500 dark:text-gray-400 text-sm md:text-base mt-2 max-w-2xl">
-                        Descubre los proyectos locales. Si quieres que el tuyo aparezca aquí o necesitas agregar tu foto/logo, contáctanos o regístralo.
+                    <p class="text-gray-500 dark:text-gray-400 text-base md:text-lg mt-4 max-w-2xl leading-relaxed font-medium">
+                        Descubre los proyectos, ideas y negocios de nuestra comunidad. ¡Si quieres que tu emprendimiento o foto aparezca aquí, regístrate y únete al ecosistema!
                     </p>
                 </div>
-                <div class="flex flex-col sm:flex-row gap-3 shrink-0 w-full md:w-auto">
-                    <a href="#" target="_blank" class="bg-primary-600 hover:bg-primary-700 text-white px-5 py-2.5 rounded-xl text-sm font-medium flex items-center justify-center gap-2 transition-all shadow-sm shadow-primary-500/30 hover:shadow-primary-500/50 hover:-translate-y-0.5">
-                        <i class="ph ph-plus-circle text-lg"></i>
-                        Registra tu Emprendimiento
+                <div class="flex flex-col sm:flex-row gap-3 shrink-0 w-full md:w-auto mt-2 md:mt-0">
+                    <a href="#" target="_blank" class="bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-500 hover:to-green-400 text-white px-8 py-3.5 rounded-full text-base font-bold flex items-center justify-center gap-2 transition-all shadow-xl shadow-primary-500/30 hover:shadow-primary-500/50 hover:-translate-y-1">
+                        <i class="ph ph-lightning text-xl"></i>
+                        ¡Registra tu Emprendimiento!
                     </a>
                 </div>
             </div>
