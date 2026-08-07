@@ -28,7 +28,7 @@ async function initializeApp(forceRefresh = false) {
                 <div>
                     <!-- AQUI CAMBIAS EL TITULO PRINCIPAL -->
                     <h2 class="text-4xl md:text-5xl font-black text-gray-900 dark:text-white flex items-center gap-3 tracking-tighter">
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-green-400">Directorio</span> Jóvenes CANACINTRA
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary-900 to-primary-600 dark:from-blue-400 dark:to-primary-500">Directorio</span> Jóvenes CANACINTRA
                     </h2>
                     
                     <!-- AQUI CAMBIAS LA DESCRIPCION DEBAJO DEL TITULO -->
@@ -39,7 +39,7 @@ async function initializeApp(forceRefresh = false) {
                 <div class="flex flex-col sm:flex-row gap-3 shrink-0 w-full md:w-auto mt-2 md:mt-0">
                     
                     <!-- AQUI CAMBIAS EL LINK DEL FORMS Y EL TEXTO DEL BOTON -->
-                    <a href="https://forms.gle/Tcsi4NmKwV8R82Qs9" target="_blank" class="bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-500 hover:to-green-400 text-white px-8 py-3.5 rounded-full text-base font-bold flex items-center justify-center gap-2 transition-all shadow-xl shadow-primary-500/30 hover:shadow-primary-500/50 hover:-translate-y-1">
+                    <a href="https://forms.gle/Tcsi4NmKwV8R82Qs9" target="_blank" class="bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-500 hover:to-primary-600 text-white px-8 py-3.5 rounded-full text-base font-bold flex items-center justify-center gap-2 transition-all shadow-xl shadow-primary-600/30 hover:shadow-primary-600/50 hover:-translate-y-1">
                         <i class="ph ph-lightning text-xl"></i>
                         ¡Registra tu Emprendimiento!
                     </a>
