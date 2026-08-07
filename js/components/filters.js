@@ -7,15 +7,16 @@ const Filters = {
         
         const uniqueCategories = [...new Set(data.map(row => row[catKey]).filter(Boolean))].sort();
 
+        // Le añadimos clases a los <option> para forzar el fondo oscuro y texto claro en modo noche
         const html = `
             <div class="glass-panel p-4 mb-6 flex flex-col sm:flex-row gap-4 items-center animate-fade-in">
                 <div class="relative w-full sm:w-72">
                     <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                         <i class="ph ph-funnel text-gray-400"></i>
                     </div>
-                    <select id="category-filter" class="glass-input w-full pl-10 h-11 appearance-none cursor-pointer">
-                        <option value="">Todos los sectores</option>
-                        ${uniqueCategories.map(c => `<option value="${c}">${c}</option>`).join('')}
+                    <select id="category-filter" class="glass-input w-full pl-10 h-11 appearance-none cursor-pointer bg-transparent text-gray-900 dark:text-white">
+                        <option value="" class="text-gray-900 dark:bg-dark-card dark:text-gray-100">Todos los sectores</option>
+                        ${uniqueCategories.map(c => `<option value="${c}" class="text-gray-900 dark:bg-dark-card dark:text-gray-100">${c}</option>`).join('')}
                     </select>
                     <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
                         <i class="ph ph-caret-down text-gray-400"></i>
