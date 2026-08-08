@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- TITULO DE LA PESTAÑA -->
     <title>Directorio Jóvenes CANACINTRA</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +20,6 @@
                         sans: ['Inter', 'sans-serif'],
                     },
                     colors: {
-                        // ROJO CANACINTRA
                         primary: {
                             50: '#fef2f2',
                             100: '#fee2e2',
@@ -30,7 +28,6 @@
                             700: '#b91c1c', 
                             900: '#7f1d1d',
                         },
-                        // AZUL MARINO CANACINTRA
                         secondary: {
                             800: '#1e3a8a',
                             900: '#1F355E', 
@@ -49,19 +46,14 @@
 </head>
 <body class="bg-gray-50 text-gray-900 dark:bg-dark-bg dark:text-gray-100 transition-colors duration-200 antialiased h-screen overflow-hidden flex flex-col">
 
+    <!-- HEADER: AHORA SOLO TIENE EL LOGO Y EL BOTON DEL SOL/LUNA -->
     <header class="h-16 border-b border-gray-200 dark:border-dark-border bg-white/70 dark:bg-dark-card/70 backdrop-blur-md sticky top-0 z-50 flex items-center justify-between px-6 shrink-0">
         <div class="flex items-center gap-3">
-            <!-- LOGO SIN FONDO BLANCO -->
-            <img src="logo.png" alt="Logo CANACINTRA" class="h-10 w-auto max-w-[120px] object-contain transition-transform hover:scale-105">
-            <h1 class="font-extrabold text-xl tracking-tight text-secondary-900 dark:text-white uppercase hidden sm:block">Jóvenes <span class="text-primary-600">CANACINTRA</span></h1>
+            <!-- LOGO SOLO -->
+            <img src="logo.png" alt="Logo CANACINTRA" class="h-12 w-auto max-w-[160px] object-contain transition-transform hover:scale-105">
         </div>
         <div class="flex items-center gap-4">
-            <button id="refresh-btn" class="flex items-center gap-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">
-                <i class="ph ph-arrows-clockwise text-lg"></i>
-                <span class="hidden sm:inline">Actualizar</span>
-            </button>
-            <div class="h-4 w-px bg-gray-300 dark:bg-gray-700"></div>
-            <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-label="Toggle Theme">
+            <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-label="Cambiar tema">
                 <i class="ph ph-moon text-xl dark:hidden"></i>
                 <i class="ph ph-sun text-xl hidden dark:block"></i>
             </button>
