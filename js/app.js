@@ -29,8 +29,8 @@ async function initializeApp(forceRefresh = false) {
                 </div>
                 <div class="flex flex-col sm:flex-row gap-3 shrink-0 w-full md:w-auto mt-2 md:mt-0">
                     
-                    <!-- BOTON MAS FORMAL (SIN RAYO, SIN EXCESO DE CURVAS) -->
-                    <a href="https://forms.gle/Tcsi4NmKwV8R82Qs9" target="_blank" class="bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-lg text-base font-semibold flex items-center justify-center transition-all shadow-md hover:-translate-y-0.5">
+                <!-- BOTON AZUL MARINO -->
+                    <a href="https://forms.gle/Tcsi4NmKwV8R82Qs9" target="_blank" class="bg-secondary-900 hover:bg-secondary-800 text-white px-8 py-3 rounded-lg text-base font-semibold flex items-center justify-center transition-all shadow-md hover:-translate-y-0.5">
                         Registrar Emprendimiento
                     </a>
                 </div>
