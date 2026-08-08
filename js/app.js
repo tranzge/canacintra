@@ -2,15 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ThemeManager.init();
     initializeApp();
 
-    const refreshBtn = document.getElementById('refresh-btn');
-    if(refreshBtn) {
-        refreshBtn.addEventListener('click', async () => {
-            const icon = refreshBtn.querySelector('i');
-            icon.classList.add('animate-spin');
-            await initializeApp(true);
-            icon.classList.remove('animate-spin');
-        });
-    }
+    // Como quitamos el boton de actualizar, eliminamos su funcionalidad aquí
 });
 
 async function initializeApp(forceRefresh = false) {
@@ -26,20 +18,19 @@ async function initializeApp(forceRefresh = false) {
         container.innerHTML = `
             <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-6 animate-fade-in">
                 <div>
-                    <!-- AQUI CAMBIAS EL TITULO PRINCIPAL -->
-                    <h2 class="text-4xl md:text-5xl font-black text-gray-900 dark:text-white flex items-center gap-3 tracking-tighter">
+                    <!-- TITULO (SIN EFECTO DE GRADIANTE Y CON PADDING BOTTOM PARA LA LETRA O) -->
+                    <h2 class="text-4xl md:text-5xl font-black text-gray-900 dark:text-white flex items-center gap-3 tracking-tighter pb-1">
                         <span class="text-primary-600">Directorio</span> Jóvenes CANACINTRA
                     </h2>
                     
-                    <!-- AQUI CAMBIAS LA DESCRIPCION DEBAJO DEL TITULO -->
                     <p class="text-gray-500 dark:text-gray-400 text-base md:text-lg mt-4 max-w-2xl leading-relaxed font-medium">
                         Descubre los proyectos, ideas y negocios de nuestra comunidad. ¡Si quieres que tu emprendimiento o foto aparezca aquí, regístrate y únete al ecosistema!
                     </p>
                 </div>
                 <div class="flex flex-col sm:flex-row gap-3 shrink-0 w-full md:w-auto mt-2 md:mt-0">
                     
-                    <!-- AQUI CAMBIAS EL LINK DEL FORMS Y EL TEXTO DEL BOTON -->
-                    <a href="https://forms.gle/Tcsi4NmKwV8R82Qs9" target="_blank" class="bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-lg text-base font-semibold flex items-center justify-center transition-all shadow-md">
+                    <!-- BOTON MAS FORMAL (SIN RAYO, SIN EXCESO DE CURVAS) -->
+                    <a href="https://forms.gle/Tcsi4NmKwV8R82Qs9" target="_blank" class="bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-lg text-base font-semibold flex items-center justify-center transition-all shadow-md hover:-translate-y-0.5">
                         Registrar Emprendimiento
                     </a>
                 </div>
